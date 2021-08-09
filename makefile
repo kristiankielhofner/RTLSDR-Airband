@@ -48,7 +48,7 @@ else ifeq ($(PLATFORM), armv7-generic)
   LDLIBS += -lfftw3f
   DEPS = $(OBJ)
 else ifeq ($(PLATFORM), armv8-generic)
-  CFLAGS += -march=armv8-a+crc -mtune=cortex-a53 -ffast-math
+  CFLAGS += -march=armv8-a+crypto+simd -mcpu=cortex-a57+crypto+simd -ffast-math
   LDLIBS += -lfftw3f
   DEPS = $(OBJ)
 else ifeq ($(PLATFORM), x86)
